@@ -1,0 +1,33 @@
+Follow the steps below to run the mlp notebook. 
+More info at: https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab.html
+
+* start runtime, select GPU, open project
+
+* click on the purple '+' item on top left, and select terminal
+
+* verify/activate conda environment in the terminal
+  - run: conda env list
+      this will list all the conda environments
+      
+  - run: conda activate default
+      this will switch from the 'studiolab' environment to the 'default' 
+  
+  - run: python --version
+  - run: uname -a
+  - run: nvidia-smi
+  these will let you know the python version, OS version, and CUDA/GPU specs/version
+
+* install python packages. You have to do this only once, since studiolab is persistent
+
+    - intall pytorch: 
+    pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
+    
+    this also installs numpy
+    
+    - install matplotlib:
+    pip install matplotlib
+    
+* next, upload the mlp.ipynb notebook on studiolab, and execute the cells
+  - first time will download the MNIST in the local dir where the notebook is
+  
+    
